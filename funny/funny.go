@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/abourget/slick"
+	"github.com/CapstoneLabs/slick"
 )
 
 type Funny struct {

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/abourget/slick"
+	"github.com/CapstoneLabs/slick"
 	"github.com/gorilla/mux"
 	"github.com/nlopes/slack"
 )

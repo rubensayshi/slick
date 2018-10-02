@@ -4,11 +4,12 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
-	"log"
 	"net/http"
 
+	log "github.com/sirupsen/logrus"
+
+	"github.com/CapstoneLabs/slick"
 	"github.com/gorilla/mux"
-	"github.com/abourget/slick"
 )
 
 func init() {

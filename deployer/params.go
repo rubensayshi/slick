@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/abourget/slick"
+	"github.com/CapstoneLabs/slick"
 )
 
 type DeployParams struct {

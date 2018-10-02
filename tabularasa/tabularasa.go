@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"sync"
 
+	"github.com/CapstoneLabs/slick"
+	"github.com/CapstoneLabs/slick/asana"
 	"github.com/gorilla/mux"
-	"github.com/abourget/slick"
-	"github.com/abourget/slick/asana"
 )
 
 type TabulaRasa struct {

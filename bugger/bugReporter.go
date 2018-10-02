@@ -3,8 +3,8 @@ package bugger
 import (
 	"fmt"
 
-	"github.com/abourget/slick/github"
-	"github.com/abourget/slick/util"
+	"github.com/CapstoneLabs/slick/github"
+	"github.com/CapstoneLabs/slick/util"
 )
 
 type bugReporter struct {

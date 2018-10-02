@@ -4,7 +4,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/abourget/slick"
+	"github.com/CapstoneLabs/slick"
 )
 
 type Mooder struct {

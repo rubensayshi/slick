@@ -1,9 +1,9 @@
 package recognition
 
 import (
-	"log"
+	log "github.com/sirupsen/logrus"
 
-	"github.com/abourget/slick"
+	"github.com/CapstoneLabs/slick"
 	"github.com/boltdb/bolt"
 )
 

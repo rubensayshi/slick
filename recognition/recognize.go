@@ -2,12 +2,13 @@ package recognition
 
 import (
 	"fmt"
-	"log"
 	"regexp"
 	"strings"
 	"time"
 
-	"github.com/abourget/slick"
+	log "github.com/sirupsen/logrus"
+
+	"github.com/CapstoneLabs/slick"
 	"github.com/nlopes/slack"
 )
 

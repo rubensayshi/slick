@@ -4,15 +4,16 @@ import (
 	"encoding/json"
 	"fmt"
 	"html/template"
-	"log"
 	"net/http"
 
-	"github.com/nlopes/slack"
-	"github.com/abourget/slick"
+	log "github.com/sirupsen/logrus"
+
+	"github.com/CapstoneLabs/slick"
 	"github.com/codegangsta/negroni"
 	"github.com/gorilla/context"
 	"github.com/gorilla/mux"
 	"github.com/gorilla/sessions"
+	"github.com/nlopes/slack"
 )
 
 var web *Webapp

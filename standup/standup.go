@@ -1,6 +1,6 @@
 package standup
 
-import "github.com/abourget/slick"
+import "github.com/CapstoneLabs/slick"
 
 type Standup struct {
 	bot            *slick.Bot

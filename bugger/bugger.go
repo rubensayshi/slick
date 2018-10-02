@@ -2,12 +2,13 @@ package bugger
 
 import (
 	"fmt"
-	"log"
 	"time"
 
-	"github.com/abourget/slick"
-	"github.com/abourget/slick/github"
-	"github.com/abourget/slick/util"
+	log "github.com/sirupsen/logrus"
+
+	"github.com/CapstoneLabs/slick"
+	"github.com/CapstoneLabs/slick/github"
+	"github.com/CapstoneLabs/slick/util"
 )
 
 const dfltReportLength = 7 // days
