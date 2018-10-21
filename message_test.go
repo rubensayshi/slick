@@ -39,20 +39,21 @@ var privateMessage = Message{
 }
 
 func TestMessage(t *testing.T) {
+	assert := assert.New(t)
 	// IsPrivate
-	assert.False(t, publicMessage.IsPrivate())
-	assert.True(t, privateMessage.IsPrivate())
+	assert.False(publicMessage.IsPrivate())
+	assert.True(privateMessage.IsPrivate())
 	// ContainsAnyCased
-	assert.True(t, publicMessage.ContainsAnyCased([]string{"This", "not"}))
-	assert.False(t, publicMessage.ContainsAnyCased([]string{"this", "not"}))
+	assert.True(publicMessage.ContainsAnyCased([]string{"This", "not"}))
+	assert.False(publicMessage.ContainsAnyCased([]string{"this", "not"}))
 	// ContainsAny
-	assert.True(t, publicMessage.ContainsAny([]string{"This", "not"}))
-	assert.True(t, publicMessage.ContainsAny([]string{"this", "not"}))
-	assert.False(t, publicMessage.ContainsAny([]string{"not", "here"}))
+	assert.True(publicMessage.ContainsAny([]string{"This", "not"}))
+	assert.True(publicMessage.ContainsAny([]string{"this", "not"}))
+	assert.False(publicMessage.ContainsAny([]string{"not", "here"}))
 	// ContainsAll
-	assert.True(t, publicMessage.ContainsAll([]string{"This", "is", "a", "test"}))
-	assert.False(t, publicMessage.ContainsAll([]string{"This", "is not", "a", "test"}))
+	assert.True(publicMessage.ContainsAll([]string{"This", "is", "a", "test"}))
+	assert.False(publicMessage.ContainsAll([]string{"This", "is not", "a", "test"}))
 	// HasPrefix
-	assert.True(t, publicMessage.HasPrefix("This"))
-	assert.False(t, publicMessage.HasPrefix("this"))
+	assert.True(publicMessage.HasPrefix("This"))
+	assert.False(publicMessage.HasPrefix("this"))
 }
