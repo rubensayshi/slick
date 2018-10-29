@@ -6,8 +6,8 @@ import (
 
 // Logging contains the configuration for logrus
 type Logging struct {
-	Level string `json:"level"`
-	Type  string `json:"type"`
+	Level string `json:"level" mapstructure:"level"`
+	Type  string `json:"type" mapstructure:"type"`
 }
 
 // getLoggingConfig return the corresponding formatter and level for logging.
