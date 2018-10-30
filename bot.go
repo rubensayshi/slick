@@ -3,7 +3,6 @@ package slick
 
 import (
 	"encoding/json"
-	"fmt"
 	"io/ioutil"
 	"net/http"
 	"os"
@@ -701,11 +700,13 @@ func (bot *Bot) handleRTMEvent(event *slack.RTMEvent) {
 	 */
 	case *slack.AckErrorEvent:
 		jsonCnt, _ := json.MarshalIndent(ev, "", "  ")
-		fmt.Printf("Error: %s", jsonCnt)
+		log.Warnf("AckErrorEvent: %s", jsonCnt)
+
+	case *slack.ConnectionErrorEvent:
+		log.Warnf("ConnectionErrorEvent: %s", ev)
 
 	default:
-		log.Printf("Event: %T", ev)
-		//log.Printf("Unexpected: %#v", ev)
+		log.Warnf("Event: %T", ev)
 	}
 
 	// Dispatch listeners
