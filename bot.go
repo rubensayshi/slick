@@ -104,7 +104,7 @@ func (bot *Bot) Run() {
 		log.WithError(err).Fatalf("Could not initialize BoltDB key/value store: %s", err)
 	}
 	defer func() {
-		log.Fatal("Database is closing")
+		log.Warnf("Database is closing")
 		db.Close()
 	}()
 	bot.DB = db
