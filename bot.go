@@ -567,14 +567,16 @@ func (bot *Bot) handleRTMEvent(event *slack.RTMEvent) {
 		// We do some heavy logging here because this is troublesome
 		// to find when it breaks and Slack breaks it by deprecating API's
 
+		// Find FromUser by ID if possible, or log error if it's not a bot message
 		user, ok := bot.Users[userID]
 		if ok {
 			log.Debug("User map is ok.")
 			msg.FromUser = &user
-		} else {
+		} else if ev.Msg.SubType != "bot_message" {
 			log.WithFields(log.Fields{
 				"Type":  "BrokenUserMap",
 				"Users": len(bot.Users),
+				"User": userID,
 			}).Error("User map is broken.")
 		}
 
